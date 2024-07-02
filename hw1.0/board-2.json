@@ -1,0 +1,43 @@
+[
+    {
+        "board": [
+            {
+                "names": [
+                    "bus=pci,qmi-chip-id=0,qmi-board-id=160"
+                ],
+                "data": "bus=pci,qmi-chip-id=0,qmi-board-id=160.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,qmi-chip-id=0,qmi-board-id=161"
+                ],
+                "data": "bus=pci,qmi-chip-id=0,qmi-board-id=161.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,qmi-chip-id=0,qmi-board-id=162"
+                ],
+                "data": "bus=pci,qmi-chip-id=0,qmi-board-id=162.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,qmi-chip-id=0,qmi-board-id=255"
+                ],
+                "data": "bus=pci,qmi-chip-id=0,qmi-board-id=255.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,qmi-chip-id=0,qmi-board-id=163"
+                ],
+                "data": "bus=pci,qmi-chip-id=0,qmi-board-id=163.bin"
+            },
+            {
+                "names": [
+                    "bus=pci,qmi-chip-id=0,qmi-board-id=164"
+                ],
+                "data": "bus=pci,qmi-chip-id=0,qmi-board-id=164.bin"
+            }
+        ],
+        "regdb": []
+    }
+]
