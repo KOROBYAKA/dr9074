@@ -7,6 +7,7 @@ include	$(TOPDIR)/rules.mk
 PKG_NAME:=wallys5g
 PKG_VERSION:=2
 PKG_RELEASE:=1
+PKG_BUILD_DIR:=$(BUILD_DIR)/wallys5g
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -16,6 +17,11 @@ define Package/wallys5g
 	TITLE:=Firmware for Wallys-DR9074
 	DEPENDS:=
 endef
+
+PKG_FIXUP:=autoreconf
+PKG_FIXUP:=patch-libtool
+PKG_FIXUP:=gettext-version
+
 
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
