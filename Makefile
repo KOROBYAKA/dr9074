@@ -18,8 +18,9 @@ define Package/wallys5g
 endef
 
 define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-	$(CP) ./hw1.0/* $(PKG_BUILD_DIR)/
+		mkdir -p $(PKG_BUILD_DIR)
+		cp $(SOURCE_DIR)/* $(PKG_BUILD_DIR)
+		$(Build/Patch)
 endef
 
 define Build/Compile
@@ -28,7 +29,7 @@ endef
 
 define Package/wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
-	$(INSTALL_DATA) ./* $(1)/lib/firmware/ath11k/QCN9074/hw1.0
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0
 endef
 
 $(eval $(call BuildPackage,wallys5g))
