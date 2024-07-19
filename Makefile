@@ -29,8 +29,8 @@ define Build/Prepare
 endef
 
 define Package/wallys5g/install
-	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0/
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/board2.bin $(1)/lib/firmware/ath11k/QCN9074/hw1.0/board2.bin
+	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
+	$(INSTALL_DATA) ./driver/hw1.0 $(1)/lib/firmware/ath11k/QCN9074/hw1.0/
 endef
 
 $(info $(PKG_BUILD_DIR))
