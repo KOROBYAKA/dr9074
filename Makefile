@@ -11,10 +11,10 @@ PKG_RELEASE:=1
 include $(INCLUDE_DIR)/package.mk
 
 define Package/wallys5g
-  SECTION:=firmware
-  CATEGORY:=Firmware
-  TITLE:=Firmware for Wallys-DR9074
-  DEPENDS:=
+	SECTION:=firmware
+	CATEGORY:=Firmware
+	TITLE:=Firmware for Wallys-DR9074
+	DEPENDS:=
 endef
 
 define Build/Prepare
@@ -27,8 +27,8 @@ define Build/Compile
 endef 
 
 define Package/wallys5g/install
-  $(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
-  $(INSTALL_DATA) $(PKG_BUILD_DIR)/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0
+	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
+	$(INSTALL_DATA) $(PKG_BUILD_DIR)/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0
 endef
 
 $(eval $(call BuildPackage,wallys5g))
