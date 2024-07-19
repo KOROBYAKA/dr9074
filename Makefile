@@ -23,9 +23,6 @@ define Build/Prepare
 		$(Build/Patch)
 endef
 
-define Build/Compile
-
-endef 
 
 define Package/wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
