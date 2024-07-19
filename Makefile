@@ -17,13 +17,6 @@ define Package/wallys5g
 	DEPENDS:=
 endef
 
-define Build/Prepare
-		mkdir -p $(PKG_BUILD_DIR)
-		cp $(SOURCE_DIR)/* $(PKG_BUILD_DIR)
-		$(Build/Patch)
-endef
-
-
 define Package/wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0
