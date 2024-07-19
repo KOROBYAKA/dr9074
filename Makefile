@@ -22,9 +22,13 @@ define Build/Prepare
 	$(CP) ./hw1.0/* $(PKG_BUILD_DIR)/
 endef
 
+define Build/Compile
+
+endef 
+
 define Package/wallys5g/install
   $(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
   $(INSTALL_DATA) $(PKG_BUILD_DIR)/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0
 endef
 
-$(eval $(call PackageDir,Makefile:$(eval $(call BuildPackage,wallys5g)),Makefile:$(eval $(call BuildPackage,wallys5g)),))
+$(eval $(call BuildPackage,wallys5g))
