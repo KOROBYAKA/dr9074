@@ -17,6 +17,10 @@ define Package/wallys5g
   DEPENDS:=
 endef
 
+define Build/Prepare
+	mkdir -p $(PKG_BUILD_DIR)
+	$(CP) ./hw1.0/* $(PKG_BUILD_DIR)/
+endef
 
 define Package/wallys5g/description
   Custom firmware for Wallys-DR9074-5G
