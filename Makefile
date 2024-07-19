@@ -17,9 +17,15 @@ define Package/wallys5g
 	DEPENDS:=
 endef
 
+define Build/Prepare
+  mkdir -p $(PKG_BUILD_DIR)
+  $(CP) ./hw1.0/board2.bin $(PKG_BUILD_DIR)/
+endef
+
+
 define Package/wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
-	$(INSTALL_BIN) ./hw1.0/board2.bin $(1)/lib/firmware/ath11k/QCN9074/hw1.0
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/board2.bin $(1)/lib/firmware/ath11k/QCN9074/hw1.0
 endef
 
 $(eval $(call BuildPackage,wallys5g))
