@@ -17,7 +17,10 @@ endef
 
 define Package/wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074
-	$(INSTALL_DATA) ./hw1.0/* $(1)/lib/firmware/ath11k/QCN9074/
+	$(INSTALL_BIN) ./amss.bin $(1)/lib/firmware/ath11k/QCN9074/
+	$(INSTALL_DATA) ./board-2.bin $(1)/lib/firmware/ath11k/QCN9074/
+	$(INSTALL_DATA) ./borad_bin $(1)/lib/firmware/ath11k/QCN9074/
+	$(INSTALL_DATA) ./m3.bin $(1)/lib/firmware/ath11k/QCN9074/
 endef
 
 $(eval $(call BuildPackage,wallys5g))
