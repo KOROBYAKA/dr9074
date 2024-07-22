@@ -15,6 +15,8 @@ define Package/wallys5g/description
 	Custom driver package to install driver files to /lib/firmware/ath11k/QCN9074.
 endef
 
+include $(INCLUDE_DIR)/package.mk
+
 define Package/wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074
 	$(INSTALL_BIN) ./amss.bin $(1)/lib/firmware/ath11k/QCN9074/
