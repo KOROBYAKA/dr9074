@@ -27,7 +27,7 @@ endef
 
 define Package/ath11k-wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
-	$(INSTALL_DIR) ./hw1.0/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0/
+	cp -r ./hw1.0/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0/
 endef
 
 $(eval $(call BuildPackage,ath11k-wallys5g))
