@@ -1,17 +1,17 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=wallys5g
+PKG_NAME:=ath11k-wallys5g
 PKG_RELEASE:=1
 PKG_VERSION:=1.0
 
 
-define Package/wallys5g
+define Package/ath11k-wallys5g
 	SECTION:=firmware
 	CATEGORY:=Firmware
 	TITLE:=Wallys 5G firmware
 endef
 
-define Package/wallys5g/description
+define Package/ath11k-wallys5g/description
 	Custom driver package to install driver files to /lib/firmware/ath11k/QCN9074.
 endef
 
@@ -25,9 +25,9 @@ define Build/Compile
 
 endef
 
-define Package/wallys5g/install
+define Package/ath11k-wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
 	$(CP) ./driver/hw1.0/* $(1)/lib/firmware/ath11k/QCN9074/hw1.0/
 endef
 
-$(eval $(call BuildPackage,wallys5g))
+$(eval $(call BuildPackage,ath11k-wallys5g))
