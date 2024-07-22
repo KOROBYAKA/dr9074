@@ -2,7 +2,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=wallys5g
 PKG_RELEASE:=1
-
+PKG_VERSION:=1.0
 
 
 define Package/wallys5g
