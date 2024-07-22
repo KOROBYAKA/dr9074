@@ -18,20 +18,9 @@ define Package/wallys5g
 	DEPENDS:=
 endef
 
-PKG_FIXUP:=autoreconf
-PKG_FIXUP:=patch-libtool
-PKG_FIXUP:=gettext-version
-
-
-define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-	$(CP) ./hw1.0/board2.bin $(PKG_BUILD_DIR)/
-endef
-
 define Package/wallys5g/install
 	$(INSTALL_DIR) $(1)/lib/firmware/ath11k/QCN9074/hw1.0
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/driver/hw1.0 $(1)/lib/firmware/ath11k/QCN9074/hw1.0/
 endef
 
-$(info $(PKG_BUILD_DIR))
 $(eval $(call BuildPackage,wallys5g))
