@@ -17,6 +17,10 @@ endef
 
 include $(INCLUDE_DIR)/package.mk
 
+PKG_FIXUP:=autoreconf
+PKG_FIXUP:=patch-libtool
+PKG_FIXUP:=gettext-version
+
 define Build/Compile
 
 endef
